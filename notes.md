@@ -3,6 +3,7 @@
 Like React, but it uses native components instead of wenb components as the building blocks
 
 - While we don't have Tailwind in React Native, we have NativeWind
+- React Functional Component Snippet: `rnfe`
 
 ```jsx
 import React from "React";
