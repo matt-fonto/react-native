@@ -37,10 +37,18 @@ export default function RootLayout() {
 
   return (
     <Stack>
-      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-      <Stack.Screen name="(auth)" options={{ headerShown: false }} />
-      <Stack.Screen name="index" options={{ headerShown: false }} />
-      <Stack.Screen name="search/[query]" options={{ headerShown: false }} />
+      <Stack.Screen
+        name="(tabs)"
+        options={
+          {
+            // to add back after to all screens
+            // headerShown: false,
+          }
+        }
+      />
+      <Stack.Screen name="(auth)" />
+      <Stack.Screen name="index" />
+      <Stack.Screen name="search/[query]" />
     </Stack>
   );
 }
