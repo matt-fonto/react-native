@@ -332,3 +332,37 @@ cmd + d => opens dev mode
 - <Stack.Screen>: Represents the individual screen in the stack. It has:
   - name: identifies it
   - options: configuring the appearance or behavior of that screen
+
+## Appwrite
+
+- Similar to Supabase
+
+```js
+// in app write:
+// database > collection > attributes: here we set the structure of the table
+/*
+    user collection => created through appwrite
+        key      |  type | isRequired?
+        ---------------------------
+        username |string | required
+        ---------------------------
+        email    | email | required
+        ---------------------------
+        avatar    | url   | required
+        ---------------------------
+        accountId | string | required
+
+    video collection
+        key      |  type | isRequired?
+        ---------------------------
+        title    |string  | required
+        ---------------------------
+        thumbnail | url   | required
+        ---------------------------
+        prompt    |string | required
+        ---------------------------
+        video     | url   | required
+        ---------------------------
+        creator | relationship with user => many to one. one user have have multiple videos. video has only one creator
+        */
+```
