@@ -95,7 +95,7 @@ const LotsOfGreetings = () => {
 
 - Similar to create-react-app or Vite, but for React Native.
 - Simplifies setup and development
-- Expo Router is quite similar to how Next.js structures the routes, with folder-based routing
+- Expo Router is quite similar to how Next.js structures the routes, with file-based routing
 - Expo is also on the path to add server components to its structure
 
 Links:
@@ -129,3 +129,17 @@ cmd + d => opens dev mode
   - r: reload app
   - m: toggle menu
   - o: open project code in editor
+
+### Expo Router
+
+#### Stack
+
+- Stack and Stack.Screen components are part of the navigation system. They are tailored for mobile navigation in React Native
+- <Stack>: Represents a stack navigator, which is a navigation pattern where screens are push onto or popped off a stack. This is the most common navigation patterns in mobile apps.
+
+  - "Container" for managing screens
+  - Screens inside the stack are nativated sequentially, with a "back" actions popping the most recent screen off the stack
+
+- <Stack.Screen>: Represents the individual screen in the stack. It has:
+  - name: identifies it
+  - options: configuring the appearance or behavior of that screen

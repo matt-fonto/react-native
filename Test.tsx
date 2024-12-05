@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroudColor: "rgba(0,0,0,0.5)",
+    backgroundColor: "rgba(0,0,0,0.5)",
     padding: 20,
   },
   imageBackground: {
@@ -83,7 +83,7 @@ const App: React.FC = () => {
         <Text>Basic Components</Text>
       </View>
 
-      <Text styles={styles.text}>This is a component!</Text>
+      <Text style={styles.text}>This is a component!</Text>
 
       <Image
         source={{ uri: "https://placekitten.com/200/200" }}
