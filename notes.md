@@ -290,6 +290,7 @@ Links:
 
 - https://docs.expo.dev/router/installation/#quick-start
 - https://docs.expo.dev/workflow/ios-simulator/
+- https://github.com/adrianhajdin/aora/tree/main/app
 
 ### First Steps
 

@@ -7,9 +7,9 @@ import {
   KeyboardTypeOptions,
 } from "react-native";
 import React, { useState } from "react";
+import clsx from "clsx";
 
 import { icons } from "@/constants";
-import clsx from "clsx";
 
 type FormFieldProps = {
   title: string;
