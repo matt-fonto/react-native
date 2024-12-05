@@ -5,8 +5,8 @@ import { images } from "@/constants";
 import FormField from "@/components/FormField";
 import CustomButton from "@/components/CustomButton";
 import { Link, router } from "expo-router";
-import { createUser } from "@/lib/appWrite";
 import { handleError } from "@/utils/handleError";
+import { createUser } from "@/lib/appwrite/users.collection";
 
 const SignUp = () => {
   const [form, setForm] = useState<CreateUser>({
