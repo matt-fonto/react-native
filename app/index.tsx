@@ -1,15 +1,60 @@
+import CustomButton from "@/components/CustomButton";
+import { images } from "@/constants";
 import { Link } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import { Text, View } from "react-native";
+import { Image, ScrollView, Text, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { Redirect, router } from "expo-router";
 
+/**
+ * Onboarding screen
+ */
 export default function HomeScreen() {
   return (
-    <View className="flex-1 bg-[#fff] items-center justify-center">
-      <Text className="text-3xl font-pblack">Index Page</Text>
+    // safe area view is good to be at the upper most level to ensure our content will always be visible
+    <SafeAreaView className="bg-primary h-full">
+      <ScrollView contentContainerStyle={{ height: "100%" }}>
+        {/* view is similar to a div */}
+        <View className="w-full justify-center items-center h-full px-4">
+          <Image
+            source={images.logo}
+            className="w-[130px] h-[84px]"
+            resizeMode="contain"
+          />
 
-      <StatusBar style="auto" />
+          <Image
+            source={images.cards}
+            className="max-w-[380px] w-full h-[300px]"
+            resizeMode="contain"
+          />
 
-      <Link href="/(tabs)/home">Home</Link>
-    </View>
+          <View className="relative mt-5 max-w-[300px] mx-auto">
+            <Text className="text-3xl text-white font-bold text-center tracking-widest">
+              Discover Endless Possibilities with{" "}
+              <Text className="text-secondary-200">Aora</Text>
+            </Text>
+
+            <Image
+              source={images.path}
+              className="w-[136px] h-[15px] absolute -bottom-3 -right-10"
+              resizeMode="contain"
+            />
+          </View>
+
+          <Text className="text-sm font-pregular text-gray-100 mt-7 text-center">
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum
+            dolor sit amet.
+          </Text>
+
+          <CustomButton
+            title="Continue with email"
+            handlePress={() => router.push("/(auth)/login")}
+          />
+        </View>
+      </ScrollView>
+
+      {/* Customize the system bar at the top */}
+      <StatusBar backgroundColor="#161622" style="light" />
+    </SafeAreaView>
   );
 }
